@@ -1,0 +1,8 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app --timeout 120
+instance_class: F1
+
+network:
+  instance_tag: allow-8080
+  forwarded_ports:
+    - 8080/tcp

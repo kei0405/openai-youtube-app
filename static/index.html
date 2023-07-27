@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube・Rap 変換アプリ</title>
+</head>
+<body>
+    <h1>YouTube・Rap 変換アプリ</h1>
+    <p>ラップにしたいYouTube動画のURLを入力してください。</p>
+    <p>※20分以上の動画や字幕が取得できない動画はラップを作成できない場合があります。</p>
+    <form action="/translate" method="post" id="translateForm">
+        <label for="url">YouTube URL</label><br>
+        <input type="text" id="url" name="url" required>
+        <input type="submit" value="実行">
+    </form>
+    <br>
+    <div id="loading" style="display: none;">変換中...</div>
+</body>
+</html>
+
+<script>
+document.getElementById('translateForm').addEventListener('submit', function() {
+    document.getElementById('loading').style.display = 'block';
+});
+</script>
